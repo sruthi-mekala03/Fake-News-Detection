@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 import re
+import os
 import nltk
 nltk.download('punkt')
 nltk.download('stopwords')
@@ -14,7 +15,8 @@ def preprocess(text):
     words = word_tokenize(text)
     words = [w for w in words if w not in stopwords.words('english')]
     return " ".join(words)
-
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(BASE_DIR, "model.pkl")
 # LOAD trained model (FAST)
 model, vectorizer = joblib.load("model.pkl")
 
