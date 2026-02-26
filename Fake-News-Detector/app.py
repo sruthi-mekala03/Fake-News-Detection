@@ -18,7 +18,7 @@ def preprocess(text):
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 model_path = os.path.join(BASE_DIR, "model.pkl")
 # LOAD trained model (FAST)
-model, vectorizer = joblib.load("model.pkl")
+model, vectorizer = joblib.load(model_path)
 
 st.title("Fake News Detector")
 
