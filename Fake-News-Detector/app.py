@@ -16,7 +16,7 @@ def preprocess(text):
     return " ".join(words)
 
 # LOAD trained model (FAST)
-model, vectorizer = joblib.load("model.pkl")
+model, vectorizer = joblib.load("Fake-News-Detector/model.pkl")
 
 st.title("Fake News Detector")
 
