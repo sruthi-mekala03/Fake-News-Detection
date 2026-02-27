@@ -4,10 +4,11 @@ import joblib
 import re
 import os
 import nltk
-nltk.download('punkt')
-nltk.download('stopwords')
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
+nltk.download('punkt')
+nltk.download('punkt_tab')
+nltk.download('stopwords')
 
 # clean text
 def preprocess(text):
